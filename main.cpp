@@ -1,21 +1,14 @@
-#include <cstdlib>
-#include <iostream>
-#include <vector>
-#include <string>
-#include <ctime>
-#include "Stack.hpp"
-#include "GameClasses.hpp"
-#include "GameLogic.hpp"
-#include "MoveManager.hpp"
+//
+//  main.cpp
+//  battle-game
+//
+//  Created by Ehiremen Ekore on 11/22/20.
+//
 
-using namespace std;
+#include "Game.hpp"
 
-int main(){
-    //using srand(), rand() because the c++ random library was inconveniently predictable when I was testing this segment
-    srand(time(NULL));
-    vector<Actor*> actors;
-
-    setupGame(actors);
-    game(actors[0], actors[1]);
-
+int main() {
+    Game game;
+    game.play();
+    return 0;
 }

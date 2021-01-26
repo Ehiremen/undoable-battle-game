@@ -1,6 +1,10 @@
-//Definitions for Stack class as well as stack actions
+// Definitions for Stack class as well as stack actions
+// Demo code supplied by Prof. Lymar
 #pragma once
 #define MAX_LENGTH 100
+#include <cstdlib>
+#include <iostream>
+
 using namespace std;
 
 class StackEmptyException{
@@ -32,6 +36,15 @@ public:
     void Push(T item);
     T Top();
     void Pop();
+    ~Stack(){
+        try {
+            if (!IsEmpty()) delete[]data; throw StackEmptyException();
+            Stack();
+        }
+        catch (StackEmptyException ex1){
+            //Stack();
+        }
+    }
 };
 
 template <typename T>
@@ -52,14 +65,14 @@ bool Stack<T>::IsFull(){
 template <typename T>
 void Stack<T>::Push(T item){
     if(IsFull()) throw StackFullException();
-
+    
     data[++top] = item;
 }
 template <typename T>
 T Stack<T>::Top(){
     if (IsEmpty()) throw StackEmptyException();
     return data[top];
-
+    
 }
 
 template <typename T>
