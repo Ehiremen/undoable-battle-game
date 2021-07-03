@@ -5,7 +5,7 @@ The game is set up with Player 1 being whoever is controlling the console and Pl
 
 ## Gameplay
 1. During the game, Player 1 is able to:
-   * Attack: Choose aany of the moves available to their Actor and use that attack on their opponent
+   * Attack: Choose any of the moves available to their Actor and use that attack on their opponent
    * Heal: Undo the last attack performed by their opponent. This is implemented using Stacks.
 
 2. Player 2 is only able to perfrom attacks. This is done by choosing a random attack from their available moves.
